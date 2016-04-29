@@ -60,9 +60,13 @@
 								<div class="4u 12u(mobilep)">
 									<label>Number of Tweets:</label>
 									<select name="num_tweets">
-										<option value="20" selected>5</option>
-										<option value="40">10</option>
-										<option value="60">15</option>
+										<option value="5" selected>5</option>
+										<option value="10">10</option>
+										<option value="15">15</option>
+										<option value="20">20</option>
+										<option value="40">40</option>
+										<option value="60">60</option>
+										<option value="80">80</option>
 									</select>
 								</div>
 							</div>
@@ -143,11 +147,11 @@
 											);
 										$locl=array_values($loc);
 										$locn = array_keys($loc);
-										$pos_count= [0,0,0,0,0,0,0] ;
-										$neg_count= [0,0,0,0,0,0,0] ;
-										$neu_count= [0,0,0,0,0,0,0] ;
-										$cust_pos=  [0,0,0,0,0,0,0] ;
-										$cust_neg=  [0,0,0,0,0,0,0] ;
+										$pos_count=array(0,0,0,0,0,0,0);
+										$neg_count=array(0,0,0,0,0,0,0);
+										$neu_count=array(0,0,0,0,0,0,0);
+										$cust_pos= array(0,0,0,0,0,0,0);
+										$cust_neg= array(0,0,0,0,0,0,0);
 										
 										for($i=0;$i<7;$i++)
 										{
@@ -237,7 +241,7 @@
 									
 									
 									$maxcneg=max($cust_neg);
-									$key = array_search($maxneg, $cust_neg);
+									$key = array_search($maxcneg, $cust_neg);
 									$scpos=$cust_pos[$key];
 									$ncregion=$locn[$key];
 									

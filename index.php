@@ -60,9 +60,13 @@
 								<div class="4u 12u(mobilep)">
 									<label>Number of Tweets:</label>
 									<select name="num_tweets">
-										<option value="20" selected>5</option>
-										<option value="40">10</option>
-										<option value="60">15</option>
+										<option value="5" selected>5</option>
+										<option value="10">10</option>
+										<option value="15">15</option>
+										<option value="20">20</option>
+										<option value="40">40</option>
+										<option value="60">60</option>
+										<option value="80">80</option>
 									</select>
 								</div>
 							</div>
